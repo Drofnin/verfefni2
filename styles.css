@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180vh;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.825);
+    font-family:Arial, Helvetica, sans-serif;
+}
+.logo{
+    grid-area:logo;
+   height: 200px;
+   width: 100%;
+}
+  /*stadsetning a logo upp a tad passi innan container*/
+
+
+.poster {
+    width: 700px;
+    height: 1000px;
+    background-color: rgb(225, 140, 3);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.825);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 column */
+    grid-template-rows: auto auto 1fr auto auto; /* Four rows */
+    gap: 20px;/* Space between grid items */
+    grid-template-areas: /* Define grid areas */
+        "logo logo"
+        "image image"
+        "description description"
+        "date location";
+}
+/*grid fengid ad láni, er enn að átta mig á því hvernig virkar*/
+
+.image {
+    grid-area: image;
+    width: 100%;
+    height: 400px;
+    object-fit: 0;
+    border-width: 4px;
+    border-style: solid;
+    border-color: #000000;
+}
+/*ekki viss um hvort að object fit er að gera eitthvað, sp. að sleppa*/
+
+.description {
+    grid-area: description;  /* Assign to the 'description' grid area */
+    font-size: 30px;
+    line-height: 1.5;
+    text-align: center;
+}
+.date {
+    grid-area:date;
+    font-size: 20px;
+}
+
+.location{
+    grid-area: location;
+    font-size: 20px;
+    text-align: right;
+
+}
